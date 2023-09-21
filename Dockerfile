@@ -4,4 +4,5 @@ RUN apt-get update -qq
 
 RUN install2.r -e \
 argparse \
+RCurl \
 && rm -rf /tmp/downloaded_packages
