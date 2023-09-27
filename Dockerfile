@@ -4,8 +4,9 @@ FROM rocker/tidyverse:4.2.3
 RUN apt-get update \
 && apt-get install -y --no-install-recommends \
 apt-utils \
-libhdf5-dev \
-patch \
+libglpk-dev \ ##library for igraph
+libhdf5-dev \ ##library for hdf5
+patch \       ##library for hdf5r compilation 
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
 
