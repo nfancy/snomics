@@ -15,6 +15,7 @@ hdf5r \
 Seurat \
 && rm -rf /tmp/downloaded_packages
 
+COPY requirements-bioc.R .
 RUN Rscript -e 'requireNamespace("BiocManager"); BiocManager::install(ask=F);' \
 && Rscript requirements-bioc.R \
 && rm -rf /tmp/downloaded_packages
