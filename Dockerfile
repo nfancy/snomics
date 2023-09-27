@@ -1,7 +1,12 @@
 FROM rocker/tidyverse:4.2.3
 
-RUN apt-get update -qq
-
+RUN apt-get update \
+&& apt-get install -y --no-install-recommends \
+apt-utils \
+libhdf5-dev \
+&& apt-get clean \
+&& rm -rf /var/lib/apt/lists/*
+ 
 RUN install2.r -e \
 argparse \
 RCurl \
