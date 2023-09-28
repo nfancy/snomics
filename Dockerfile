@@ -16,6 +16,8 @@ argparse \
 RCurl \
 hdf5r \
 Seurat \
+SeuratObject \
+Matrix \
 && rm -rf /tmp/downloaded_packages
 
 ## install R packages from bioconductor
